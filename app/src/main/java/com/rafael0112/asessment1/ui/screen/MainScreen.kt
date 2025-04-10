@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import com.rafael0112.asessment1.R
 import com.rafael0112.asessment1.ui.theme.Asessment1Theme
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
@@ -62,6 +63,10 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     var timestamp by remember {
         mutableLongStateOf(0)
     }
+
+    val calendar = remember { Calendar.getInstance() }
+    calendar.timeInMillis = timestamp
+    val selectedYear = calendar.get(Calendar.YEAR)
     Column {
         Surface(
             modifier = modifier.fillMaxWidth(0.5f).padding(top = 24.dp)
@@ -125,6 +130,11 @@ fun DatePickerModalInput(
     ) {
         DatePicker(state = datePickerState)
     }
+}
+
+@Composable
+fun ShioCalculate() {
+
 }
 
 
