@@ -66,7 +66,6 @@ fun ScreenContent(modifier: Modifier = Modifier) {
 
     val calendar = remember { Calendar.getInstance() }
     calendar.timeInMillis = timestamp
-    val selectedYear = calendar.get(Calendar.YEAR)
 
     val selectedCalendar = remember(timestamp) {
         Calendar.getInstance().apply {
@@ -105,6 +104,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 Text(text = stringResource(R.string.error_code))
             } else {
                 Text(text = stringResource(R.string.tanggal, formateDate(timestamp)))
+                ShioCalculate(timestamp)
             }
         }
 
@@ -147,8 +147,30 @@ fun DatePickerModalInput(
 }
 
 @Composable
-fun ShioCalculate() {
-    
+fun ShioCalculate(timestamp: Long) {
+    if (timestamp == 0L) {
+        return
+    }
+
+    val calendar = remember(timestamp) {
+        Calendar.getInstance().apply {
+            timeInMillis = timestamp
+        }
+    }
+
+    val year = calendar.get(Calendar.YEAR)
+
+    val shioList = listOf(
+        "Monyet", "Ayam", "Anjing", "Babi", "Tikus",
+        "Kerbau", "Macan", "Kelinci", "Naga", "Ular",
+        "Kuda", "Kambing"
+    )
+
+    val index = year % 12
+    val shio = shioList[index]
+
+    Text(text = stringResource(R.string.shio_name, shio, year))
+
 }
 
 

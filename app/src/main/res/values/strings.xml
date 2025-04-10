@@ -3,4 +3,5 @@
     <string name="button_umur">Select Birth Date</string>
     <string name="tanggal">%1$s</string>
     <string name="error_code">Date can\'t more than current date</string>
+    <string name="shio_name">Shio kamu: %1$s (%2$d)</string>
 </resources>
