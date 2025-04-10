@@ -2,8 +2,10 @@ package com.rafael0112.asessment1.ui.screen
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -82,7 +84,11 @@ fun ScreenContent(modifier: Modifier = Modifier) {
 
     val currentDate = Calendar.getInstance()
 
-    Column {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Surface(
             modifier = modifier.fillMaxWidth(0.5f).padding(top = 24.dp)
         ) {
@@ -170,6 +176,10 @@ fun ShioCalculate(timestamp: Long) {
     val year = calendar.get(Calendar.YEAR)
 
     val shioList = listOf(
+        Shio(R.string.monyet, R.drawable.monyet),
+        Shio(R.string.ayam, R.drawable.ayam),
+        Shio(R.string.anjing, R.drawable.anjing),
+        Shio(R.string.babi, R.drawable.babi),
         Shio(R.string.tikus, R.drawable.tikus),
         Shio(R.string.kerbau, R.drawable.kerbau),
         Shio(R.string.macan, R.drawable.macan),
@@ -177,19 +187,17 @@ fun ShioCalculate(timestamp: Long) {
         Shio(R.string.naga, R.drawable.naga),
         Shio(R.string.ular, R.drawable.ular),
         Shio(R.string.kuda, R.drawable.kuda),
-        Shio(R.string.kambing, R.drawable.kambing),
-        Shio(R.string.monyet, R.drawable.monyet),
-        Shio(R.string.ayam, R.drawable.ayam),
-        Shio(R.string.anjing, R.drawable.anjing),
-        Shio(R.string.babi, R.drawable.babi)
+        Shio(R.string.kambing, R.drawable.kambing)
     )
-    
+
+
     val index = year % 12
     val shio = shioList[index]
 
     Column(
-        modifier = Modifier.padding(16.dp),
+        modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
+
     ) {
         Image(
             painter = painterResource(id = shio.imageResId),
