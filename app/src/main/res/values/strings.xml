@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Show Your Shio</string>
     <string name="button_umur">Select Birth Date</string>
+    <string name="tanggal">%1$s</string>
 </resources>

@@ -2,7 +2,6 @@ package com.rafael0112.asessment1.ui.screen
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -30,6 +29,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.rafael0112.asessment1.R
 import com.rafael0112.asessment1.ui.theme.Asessment1Theme
+import java.sql.Timestamp
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -70,22 +73,31 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 }
             ) {
                 Text(text = stringResource(R.string.button_umur))
-            }
-
-            if (showDatePicker) {
-                DatePickerModalInput(
-                    onDateSelected = {
-                        if (it != null) {
-                            timestamp = it
+                if (showDatePicker) {
+                    DatePickerModalInput(
+                        onDateSelected = {
+                            if (it != null) {
+                                timestamp = it
+                            }
                         }
+                    ) {
+                        showDatePicker = false
                     }
-                ) {
-                    showDatePicker = false
                 }
             }
+
+        }
+        if (timestamp != 0L) {
+            Text(text = stringResource(R.string.tanggal, FormateDate(timestamp)))
         }
     }
+}
 
+@Composable
+fun FormateDate(timestamp: Long): String {
+    if (timestamp == 0L) return ""
+    val date = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+    return date.format(Date(timestamp))
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
