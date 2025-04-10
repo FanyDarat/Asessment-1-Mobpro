@@ -1,9 +1,13 @@
 package com.rafael0112.asessment1.ui.screen
 
 import android.content.res.Configuration
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
@@ -23,11 +27,14 @@ import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.rafael0112.asessment1.R
+import com.rafael0112.asessment1.model.Shio
 import com.rafael0112.asessment1.ui.theme.Asessment1Theme
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -146,6 +153,8 @@ fun DatePickerModalInput(
     }
 }
 
+
+
 @Composable
 fun ShioCalculate(timestamp: Long) {
     if (timestamp == 0L) {
@@ -161,17 +170,42 @@ fun ShioCalculate(timestamp: Long) {
     val year = calendar.get(Calendar.YEAR)
 
     val shioList = listOf(
-        "Monyet", "Ayam", "Anjing", "Babi", "Tikus",
-        "Kerbau", "Macan", "Kelinci", "Naga", "Ular",
-        "Kuda", "Kambing"
+        Shio(R.string.tikus, R.drawable.tikus),
+        Shio(R.string.kerbau, R.drawable.kerbau),
+        Shio(R.string.macan, R.drawable.macan),
+        Shio(R.string.kelinci, R.drawable.kelinci),
+        Shio(R.string.naga, R.drawable.naga),
+        Shio(R.string.ular, R.drawable.ular),
+        Shio(R.string.kuda, R.drawable.kuda),
+        Shio(R.string.kambing, R.drawable.kambing),
+        Shio(R.string.monyet, R.drawable.monyet),
+        Shio(R.string.ayam, R.drawable.ayam),
+        Shio(R.string.anjing, R.drawable.anjing),
+        Shio(R.string.babi, R.drawable.babi)
     )
-
+    
     val index = year % 12
     val shio = shioList[index]
 
-    Text(text = stringResource(R.string.shio_name, shio, year))
+    Column(
+        modifier = Modifier.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painter = painterResource(id = shio.imageResId),
+            contentDescription = stringResource(id = shio.nameResId),
+            modifier = Modifier.size(250.dp)
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            text = stringResource(R.string.shio_name, stringResource(id = shio.nameResId), year),
+            style = MaterialTheme.typography.bodyLarge
+        )
+    }
 
 }
+
+
 
 
 @Preview(showBackground = true)

@@ -4,4 +4,16 @@
     <string name="tanggal">%1$s</string>
     <string name="error_code">Date can\'t more than current date</string>
     <string name="shio_name">Shio kamu: %1$s (%2$d)</string>
+    <string name="tikus">Tikus</string>
+    <string name="kerbau">Kerbau</string>
+    <string name="macan">Macan</string>
+    <string name="kelinci">Kelinci</string>
+    <string name="naga">Naga</string>
+    <string name="ular">Ular</string>
+    <string name="kuda">Kuda</string>
+    <string name="kambing">Kambing</string>
+    <string name="monyet">Monyet</string>
+    <string name="ayam">Ayam</string>
+    <string name="anjing">Anjing</string>
+    <string name="babi">Babi</string>
 </resources>
