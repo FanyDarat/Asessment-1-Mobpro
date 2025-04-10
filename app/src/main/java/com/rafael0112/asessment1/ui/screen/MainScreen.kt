@@ -67,6 +67,15 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     val calendar = remember { Calendar.getInstance() }
     calendar.timeInMillis = timestamp
     val selectedYear = calendar.get(Calendar.YEAR)
+
+    val selectedCalendar = remember(timestamp) {
+        Calendar.getInstance().apply {
+            timeInMillis = timestamp
+        }
+    }
+
+    val currentDate = Calendar.getInstance()
+
     Column {
         Surface(
             modifier = modifier.fillMaxWidth(0.5f).padding(top = 24.dp)
@@ -92,8 +101,13 @@ fun ScreenContent(modifier: Modifier = Modifier) {
 
         }
         if (timestamp != 0L) {
-            Text(text = stringResource(R.string.tanggal, formateDate(timestamp)))
+            if (selectedCalendar.after(currentDate)) {
+                Text(text = stringResource(R.string.error_code))
+            } else {
+                Text(text = stringResource(R.string.tanggal, formateDate(timestamp)))
+            }
         }
+
     }
 }
 
@@ -134,7 +148,7 @@ fun DatePickerModalInput(
 
 @Composable
 fun ShioCalculate() {
-
+    
 }
 
 
