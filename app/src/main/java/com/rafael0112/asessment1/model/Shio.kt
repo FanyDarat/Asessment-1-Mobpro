@@ -4,5 +4,6 @@ import androidx.annotation.DrawableRes
 
 data class Shio(
     val nameResId: Int,
-    @DrawableRes val imageResId: Int
+    @DrawableRes val imageResId: Int,
+    val descriptionResId: Int
 )

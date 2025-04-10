@@ -85,12 +85,12 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     val currentDate = Calendar.getInstance()
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().padding(top = 24.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Surface(
-            modifier = modifier.fillMaxWidth(0.5f).padding(top = 24.dp)
+            modifier = modifier.fillMaxWidth(0.5f).padding(top =8.dp)
         ) {
             Button(
                 onClick = {
@@ -116,7 +116,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             if (selectedCalendar.after(currentDate)) {
                 Text(text = stringResource(R.string.error_code))
             } else {
-                Text(text = stringResource(R.string.tanggal, formateDate(timestamp)))
+                Text(text = stringResource(R.string.tanggal, dateFormat(timestamp)))
                 ShioCalculate(timestamp)
             }
         }
@@ -125,7 +125,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun formateDate(timestamp: Long): String {
+fun dateFormat(timestamp: Long): String {
     if (timestamp == 0L) return ""
     val date = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
     return date.format(Date(timestamp))
@@ -159,8 +159,6 @@ fun DatePickerModalInput(
     }
 }
 
-
-
 @Composable
 fun ShioCalculate(timestamp: Long) {
     if (timestamp == 0L) {
@@ -176,20 +174,19 @@ fun ShioCalculate(timestamp: Long) {
     val year = calendar.get(Calendar.YEAR)
 
     val shioList = listOf(
-        Shio(R.string.monyet, R.drawable.monyet),
-        Shio(R.string.ayam, R.drawable.ayam),
-        Shio(R.string.anjing, R.drawable.anjing),
-        Shio(R.string.babi, R.drawable.babi),
-        Shio(R.string.tikus, R.drawable.tikus),
-        Shio(R.string.kerbau, R.drawable.kerbau),
-        Shio(R.string.macan, R.drawable.macan),
-        Shio(R.string.kelinci, R.drawable.kelinci),
-        Shio(R.string.naga, R.drawable.naga),
-        Shio(R.string.ular, R.drawable.ular),
-        Shio(R.string.kuda, R.drawable.kuda),
-        Shio(R.string.kambing, R.drawable.kambing)
+        Shio(R.string.monyet, R.drawable.monyet, R.string.deskripsi_monyet),
+        Shio(R.string.ayam, R.drawable.ayam, R.string.deskripsi_ayam),
+        Shio(R.string.anjing, R.drawable.anjing, R.string.deskripsi_anjing),
+        Shio(R.string.babi, R.drawable.babi, R.string.deskripsi_babi),
+        Shio(R.string.tikus, R.drawable.tikus, R.string.deskripsi_tikus),
+        Shio(R.string.kerbau, R.drawable.kerbau, R.string.deskripsi_kerbau),
+        Shio(R.string.macan, R.drawable.macan, R.string.deskripsi_macan),
+        Shio(R.string.kelinci, R.drawable.kelinci, R.string.deskripsi_kelinci),
+        Shio(R.string.naga, R.drawable.naga, R.string.deskripsi_naga),
+        Shio(R.string.ular, R.drawable.ular, R.string.deskripsi_ular),
+        Shio(R.string.kuda, R.drawable.kuda, R.string.deskripsi_kuda),
+        Shio(R.string.kambing, R.drawable.kambing, R.string.deskripsi_kambing)
     )
-
 
     val index = year % 12
     val shio = shioList[index]
@@ -202,19 +199,21 @@ fun ShioCalculate(timestamp: Long) {
         Image(
             painter = painterResource(id = shio.imageResId),
             contentDescription = stringResource(id = shio.nameResId),
-            modifier = Modifier.size(250.dp)
+            modifier = Modifier.size(240.dp)
         )
-        Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = stringResource(R.string.shio_name, stringResource(id = shio.nameResId), year),
+            text = stringResource(R.string.shio_name, stringResource(id = shio.nameResId)),
             style = MaterialTheme.typography.bodyLarge
+        )
+        Spacer(modifier = Modifier.height(4.dp))
+        Text(
+            text = stringResource(id = shio.descriptionResId),
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.padding(horizontal = 24.dp)
         )
     }
 
 }
-
-
-
 
 @Preview(showBackground = true)
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
