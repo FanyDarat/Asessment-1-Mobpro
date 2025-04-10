@@ -30,4 +30,11 @@
     <string name="deskripsi_ayam">Shio Ayam melambangkan ketelitian, keberanian, dan disiplin tinggi. Mereka jujur, pekerja keras, dan sering perfeksionis. Orang dengan shio ini memiliki kemampuan organisasi yang baik dan tidak takut mengemukakan pendapatnya.</string>
     <string name="deskripsi_anjing">Shio Anjing dikenal setia, jujur, dan adil. Mereka sangat peduli pada kebenaran dan keadilan. Orang dengan shio ini cenderung dapat dipercaya, tulus, dan selalu siap membantu orang lain dalam kesulitan.</string>
     <string name="deskripsi_babi">Shio Babi melambangkan ketulusan, kemurahan hati, dan kehangatan. Mereka jujur, lembut, dan suka membantu sesama. Orang dengan shio ini menikmati kehidupan yang nyaman dan damai serta selalu menghargai kejujuran dan persahabatan.</string>
+
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="copyright">"Show Your Shio" adalah aplikasi untuk mengetahu shio anda berdasarkan
+        tahun kelahiran anda. Shio merupakan sistem astrologi yang digunakan
+        oleh etnis Tionghoa. Shio ini memiliki total dua belas binatang sebagai lambang tahun kelahiran. Keduabelas simbol shio ini berurutan dan
+        terus berputar setiap 12 tahun. Maka dari itu, pada tahun ke-13 simbol shio binatang yang sama akan kembali muncul
+    </string>
 </resources>
