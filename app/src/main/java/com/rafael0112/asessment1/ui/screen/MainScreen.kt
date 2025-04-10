@@ -88,13 +88,13 @@ fun ScreenContent(modifier: Modifier = Modifier) {
 
         }
         if (timestamp != 0L) {
-            Text(text = stringResource(R.string.tanggal, FormateDate(timestamp)))
+            Text(text = stringResource(R.string.tanggal, formateDate(timestamp)))
         }
     }
 }
 
 @Composable
-fun FormateDate(timestamp: Long): String {
+fun formateDate(timestamp: Long): String {
     if (timestamp == 0L) return ""
     val date = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
     return date.format(Date(timestamp))
