@@ -1,6 +1,9 @@
 package com.rafael0112.asessment1.ui.screen
 
 import android.content.res.Configuration
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.DatePicker
@@ -9,6 +12,7 @@ import androidx.compose.material3.DisplayMode
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -23,6 +27,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.rafael0112.asessment1.R
 import com.rafael0112.asessment1.ui.theme.Asessment1Theme
 
@@ -55,26 +60,32 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     var timestamp by remember {
         mutableLongStateOf(0)
     }
+    Column {
+        Surface(
+            modifier = modifier.fillMaxWidth(0.5f).padding(top = 24.dp)
+        ) {
+            Button(
+                onClick = {
+                    showDatePicker = true
+                }
+            ) {
+                Text(text = stringResource(R.string.button_umur))
+            }
 
-    Button(
-        onClick = {
-            showDatePicker = true
-        }
-    ) {
-        Text("Kill Niggers")
-    }
-
-    if (showDatePicker) {
-        DatePickerModalInput(
-            onDateSelected = {
-                if (it != null) {
-                    timestamp = it
+            if (showDatePicker) {
+                DatePickerModalInput(
+                    onDateSelected = {
+                        if (it != null) {
+                            timestamp = it
+                        }
+                    }
+                ) {
+                    showDatePicker = false
                 }
             }
-        ) {
-            showDatePicker = false
         }
     }
+
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

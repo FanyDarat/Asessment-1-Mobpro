@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Asessment 1</string>
+    <string name="app_name">Show Your Shio</string>
+    <string name="button_umur">Select Birth Date</string>
 </resources>
