@@ -1,9 +1,12 @@
 package com.rafael0112.asessment1.ui.screen
 
+import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -35,6 +38,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -209,6 +213,8 @@ fun ShioCalculate(timestamp: Long) {
     val index = year % 12
     val shio = shioList[index]
 
+    val context = LocalContext.current
+
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -229,8 +235,34 @@ fun ShioCalculate(timestamp: Long) {
             style = MaterialTheme.typography.bodyMedium,
             modifier = Modifier.padding(horizontal = 24.dp)
         )
-    }
+        Button(
+            onClick = {
+                shareData(
+                    context = context,
+                    message = context.getString(
+                        R.string.bagikan_template,
+                        context.getString(shio.nameResId),
+                        context.getString(shio.descriptionResId)
+                    )
 
+                )
+            },
+            modifier = Modifier.padding(top = 8.dp),
+            contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+        ) {
+            Text(text = stringResource(R.string.bagikan))
+        }
+    }
+}
+
+private fun shareData(context: Context, message: String) {
+    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, message)
+    }
+    if (shareIntent.resolveActivity(context.packageManager) != null) {
+        context.startActivity(shareIntent)
+    }
 }
 
 @Preview(showBackground = true)
