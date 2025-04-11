@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Show Your Shio</string>
+    <string name="button_umur">Pilih Tanggal Lahir</string>
+    <string name="error_code">Tanggal tidak bisa lebih dari tanggal yang sekarang</string>
+    <string name="shio_name">Shio anda: %1$s</string>
+    <string name="tikus">Tikus</string>
+    <string name="kerbau">Kerbau</string>
+    <string name="macan">Macan</string>
+    <string name="kelinci">Kelinci</string>
+    <string name="naga">Naga</string>
+    <string name="ular">Ular</string>
+    <string name="kuda">Kuda</string>
+    <string name="kambing">Kambing</string>
+    <string name="monyet">Monyet</string>
+    <string name="ayam">Ayam</string>
+    <string name="anjing">Anjing</string>
+    <string name="babi">Babi</string>
+    <string name="deskripsi_tikus">Shio Tikus melambangkan kecerdikan, kelincahan, dan intuisi yang tajam. Mereka dikenal sebagai pemikir cepat, hemat, dan sangat adaptif dalam berbagai situasi. Orang dengan shio ini cenderung cerdas dalam mengambil peluang, serta memiliki keahlian dalam berkomunikasi dan bersosialisasi.</string>
+    <string name="deskripsi_kerbau">Shio Kerbau menggambarkan ketekunan, keandalan, dan kerja keras. Mereka rajin, sabar, dan memiliki semangat tanggung jawab yang tinggi. Orang dengan shio ini biasanya dapat dipercaya dan konsisten dalam mencapai tujuan mereka.</string>
+    <string name="deskripsi_macan">Shio Macan melambangkan keberanian, kekuatan, dan karisma alami. Mereka memiliki jiwa kepemimpinan yang kuat dan tidak takut mengambil risiko. Orang dengan shio ini biasanya penuh energi, percaya diri, dan berani memperjuangkan yang mereka yakini.</string>
+    <string name="deskripsi_kelinci">Shio Kelinci dikenal lembut, penuh perhatian, dan cinta damai. Mereka sensitif, ramah, dan diplomatis dalam hubungan sosial. Orang dengan shio ini cenderung menghindari konflik dan menghargai keindahan serta kenyamanan hidup.</string>
+    <string name="deskripsi_naga">Shio Naga mencerminkan kekuatan, ambisi, dan karisma yang luar biasa. Mereka lahir sebagai pemimpin dan memiliki keberanian untuk mengejar impian besar. Orang dengan shio ini cenderung percaya diri, penuh semangat, dan berwibawa.</string>
+    <string name="deskripsi_ular">Shio Ular melambangkan kebijaksanaan, misteri, dan ketenangan. Mereka berpikir dalam, intuitif, dan sering menyimpan rencana dengan rapi. Orang dengan shio ini biasanya elegan, strategis, dan sangat analitis dalam mengambil keputusan.</string>
+    <string name="deskripsi_kuda">Shio Kuda dikenal penuh energi, mandiri, dan suka kebebasan. Mereka dinamis, optimis, dan cepat dalam bertindak. Orang dengan shio ini menyukai tantangan baru dan memiliki semangat petualang yang tinggi.</string>
+    <string name="deskripsi_kambing">Shio Kambing melambangkan kelembutan, empati, dan artistik. Mereka sensitif terhadap perasaan orang lain dan memiliki bakat dalam seni. Orang dengan shio ini cenderung sabar, penuh kasih, dan sangat peduli pada kesejahteraan orang-orang di sekitar mereka.</string>
+    <string name="deskripsi_monyet">Shio Monyet dikenal cerdas, jenaka, dan penuh akal. Mereka cepat belajar, suka tantangan, dan mudah beradaptasi. Orang dengan shio ini seringkali menjadi pusat perhatian karena ide-idenya yang unik dan cara berpikirnya yang kreatif.</string>
+    <string name="deskripsi_ayam">Shio Ayam melambangkan ketelitian, keberanian, dan disiplin tinggi. Mereka jujur, pekerja keras, dan sering perfeksionis. Orang dengan shio ini memiliki kemampuan organisasi yang baik dan tidak takut mengemukakan pendapatnya.</string>
+    <string name="deskripsi_anjing">Shio Anjing dikenal setia, jujur, dan adil. Mereka sangat peduli pada kebenaran dan keadilan. Orang dengan shio ini cenderung dapat dipercaya, tulus, dan selalu siap membantu orang lain dalam kesulitan.</string>
+    <string name="deskripsi_babi">Shio Babi melambangkan ketulusan, kemurahan hati, dan kehangatan. Mereka jujur, lembut, dan suka membantu sesama. Orang dengan shio ini menikmati kehidupan yang nyaman dan damai serta selalu menghargai kejujuran dan persahabatan.</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="copyright">\"Show Your Shio\" adalah aplikasi untuk mengetahu shio anda berdasarkan         tahun kelahiran anda. Shio merupakan sistem astrologi yang digunakan         oleh etnis Tionghoa. Shio ini memiliki total dua belas binatang sebagai lambang tahun kelahiran. Keduabelas simbol shio ini berurutan dan         terus berputar setiap 12 tahun. Maka dari itu, pada tahun ke-13 simbol shio binatang yang sama akan kembali muncul</string>
+    <string name="kembali">Kembali</string>
+    <string name="logo_description">Logo Shio</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template">Shio anda: %1$s\\n\\nDeskripsi: %2$s</string>
+</resources>

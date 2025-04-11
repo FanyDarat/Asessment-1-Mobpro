@@ -1,9 +1,6 @@
 package com.rafael0112.asessment1.ui.screen
 
-import android.content.Context
-import android.content.Intent
 import android.content.res.Configuration
-import android.media.Image
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

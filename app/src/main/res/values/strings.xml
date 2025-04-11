@@ -1,46 +1,43 @@
 <resources>
     <string name="app_name">Show Your Shio</string>
     <string name="button_umur">Select Birth Date</string>
-    <string name="tanggal">%1$s</string>
+    <string name="tanggal" translatable="false">%1$s</string>
     <string name="error_code">Date can\'t more than current date</string>
-    <string name="shio_name">Shio kamu adalah %1$s</string>
+    <string name="shio_name">Your Shio is: %1$s</string>
 
-    <string name="tikus">Tikus</string>
-    <string name="kerbau">Kerbau</string>
-    <string name="macan">Macan</string>
-    <string name="kelinci">Kelinci</string>
-    <string name="naga">Naga</string>
-    <string name="ular">Ular</string>
-    <string name="kuda">Kuda</string>
-    <string name="kambing">Kambing</string>
-    <string name="monyet">Monyet</string>
-    <string name="ayam">Ayam</string>
-    <string name="anjing">Anjing</string>
-    <string name="babi">Babi</string>
+    <string name="tikus">Rat</string>
+    <string name="kerbau">Ox</string>
+    <string name="macan">Tiger</string>
+    <string name="kelinci">Rabbit</string>
+    <string name="naga">Dragon</string>
+    <string name="ular">Snake</string>
+    <string name="kuda">Horse</string>
+    <string name="kambing">Goat</string>
+    <string name="monyet">Monkey</string>
+    <string name="ayam">Rooster</string>
+    <string name="anjing">Dog</string>
+    <string name="babi">Pig</string>
 
-    <string name="deskripsi_tikus">Shio Tikus melambangkan kecerdikan, kelincahan, dan intuisi yang tajam. Mereka dikenal sebagai pemikir cepat, hemat, dan sangat adaptif dalam berbagai situasi. Orang dengan shio ini cenderung cerdas dalam mengambil peluang, serta memiliki keahlian dalam berkomunikasi dan bersosialisasi.</string>
-    <string name="deskripsi_kerbau">Shio Kerbau menggambarkan ketekunan, keandalan, dan kerja keras. Mereka rajin, sabar, dan memiliki semangat tanggung jawab yang tinggi. Orang dengan shio ini biasanya dapat dipercaya dan konsisten dalam mencapai tujuan mereka.</string>
-    <string name="deskripsi_macan">Shio Macan melambangkan keberanian, kekuatan, dan karisma alami. Mereka memiliki jiwa kepemimpinan yang kuat dan tidak takut mengambil risiko. Orang dengan shio ini biasanya penuh energi, percaya diri, dan berani memperjuangkan yang mereka yakini.</string>
-    <string name="deskripsi_kelinci">Shio Kelinci dikenal lembut, penuh perhatian, dan cinta damai. Mereka sensitif, ramah, dan diplomatis dalam hubungan sosial. Orang dengan shio ini cenderung menghindari konflik dan menghargai keindahan serta kenyamanan hidup.</string>
-    <string name="deskripsi_naga">Shio Naga mencerminkan kekuatan, ambisi, dan karisma yang luar biasa. Mereka lahir sebagai pemimpin dan memiliki keberanian untuk mengejar impian besar. Orang dengan shio ini cenderung percaya diri, penuh semangat, dan berwibawa.</string>
-    <string name="deskripsi_ular">Shio Ular melambangkan kebijaksanaan, misteri, dan ketenangan. Mereka berpikir dalam, intuitif, dan sering menyimpan rencana dengan rapi. Orang dengan shio ini biasanya elegan, strategis, dan sangat analitis dalam mengambil keputusan.</string>
-    <string name="deskripsi_kuda">Shio Kuda dikenal penuh energi, mandiri, dan suka kebebasan. Mereka dinamis, optimis, dan cepat dalam bertindak. Orang dengan shio ini menyukai tantangan baru dan memiliki semangat petualang yang tinggi.</string>
-    <string name="deskripsi_kambing">Shio Kambing melambangkan kelembutan, empati, dan artistik. Mereka sensitif terhadap perasaan orang lain dan memiliki bakat dalam seni. Orang dengan shio ini cenderung sabar, penuh kasih, dan sangat peduli pada kesejahteraan orang-orang di sekitar mereka.</string>
-    <string name="deskripsi_monyet">Shio Monyet dikenal cerdas, jenaka, dan penuh akal. Mereka cepat belajar, suka tantangan, dan mudah beradaptasi. Orang dengan shio ini seringkali menjadi pusat perhatian karena ide-idenya yang unik dan cara berpikirnya yang kreatif.</string>
-    <string name="deskripsi_ayam">Shio Ayam melambangkan ketelitian, keberanian, dan disiplin tinggi. Mereka jujur, pekerja keras, dan sering perfeksionis. Orang dengan shio ini memiliki kemampuan organisasi yang baik dan tidak takut mengemukakan pendapatnya.</string>
-    <string name="deskripsi_anjing">Shio Anjing dikenal setia, jujur, dan adil. Mereka sangat peduli pada kebenaran dan keadilan. Orang dengan shio ini cenderung dapat dipercaya, tulus, dan selalu siap membantu orang lain dalam kesulitan.</string>
-    <string name="deskripsi_babi">Shio Babi melambangkan ketulusan, kemurahan hati, dan kehangatan. Mereka jujur, lembut, dan suka membantu sesama. Orang dengan shio ini menikmati kehidupan yang nyaman dan damai serta selalu menghargai kejujuran dan persahabatan.</string>
+    <string name="deskripsi_tikus">The Rat zodiac symbolizes cleverness, agility, and sharp intuition. They are known as quick thinkers, thrifty, and highly adaptable in various situations. People with this sign tend to be smart in seizing opportunities and skilled in communication and social interaction.</string>
+    <string name="deskripsi_kerbau">The Ox zodiac represents perseverance, reliability, and hard work. They are diligent, patient, and have a strong sense of responsibility. People with this sign are usually trustworthy and consistent in achieving their goals.</string>
+    <string name="deskripsi_macan">The Tiger zodiac symbolizes courage, strength, and natural charisma. They possess strong leadership qualities and are not afraid to take risks. People with this sign are energetic, confident, and brave in standing up for what they believe in.</string>
+    <string name="deskripsi_kelinci">The Rabbit zodiac is known for its gentleness, attentiveness, and peaceful nature. They are sensitive, friendly, and diplomatic in social relationships. People with this sign tend to avoid conflict and value beauty and comfort in life.</string>
+    <string name="deskripsi_naga">The Dragon zodiac reflects strength, ambition, and extraordinary charisma. They are born leaders with the courage to pursue big dreams. People with this sign tend to be confident, passionate, and authoritative.</string>
+    <string name="deskripsi_ular">The Snake zodiac symbolizes wisdom, mystery, and calmness. They are deep thinkers, intuitive, and often keep their plans well organized. People with this sign are elegant, strategic, and highly analytical in decision-making.</string>
+    <string name="deskripsi_kuda">The Horse zodiac is known for being energetic, independent, and freedom-loving. They are dynamic, optimistic, and quick to act. People with this sign enjoy new challenges and have a strong adventurous spirit.</string>
+    <string name="deskripsi_kambing">The Goat zodiac symbolizes gentleness, empathy, and artistic talent. They are sensitive to others\' feelings and have a knack for the arts. People with this sign tend to be patient, caring, and deeply concerned with the well-being of those around them.</string>
+    <string name="deskripsi_monyet">The Monkey zodiac is known for intelligence, humor, and resourcefulness. They learn quickly, love challenges, and adapt easily. People with this sign often become the center of attention due to their unique ideas and creative thinking.</string>
+    <string name="deskripsi_ayam">The Rooster zodiac symbolizes precision, courage, and high discipline. They are honest, hardworking, and often perfectionists. People with this sign have strong organizational skills and are not afraid to voice their opinions.</string>
+    <string name="deskripsi_anjing">The Dog zodiac is known for loyalty, honesty, and fairness. They deeply care about truth and justice. People with this sign tend to be trustworthy, sincere, and always ready to help others in need.</string>
+    <string name="deskripsi_babi">The Pig zodiac represents sincerity, generosity, and warmth. They are honest, gentle, and like to help others. People with this sign enjoy a comfortable and peaceful life and always value honesty and friendship.</string>
 
     <string name="tentang_aplikasi">About App</string>
-    <string name="copyright">"Show Your Shio" adalah aplikasi untuk mengetahu shio anda berdasarkan
-        tahun kelahiran anda. Shio merupakan sistem astrologi yang digunakan
-        oleh etnis Tionghoa. Shio ini memiliki total dua belas binatang sebagai lambang tahun kelahiran. Keduabelas simbol shio ini berurutan dan
-        terus berputar setiap 12 tahun. Maka dari itu, pada tahun ke-13 simbol shio binatang yang sama akan kembali muncul
-    </string>
+    <string name="copyright">"Show Your Shio" is an application to discover your Chinese zodiac based on your birth year. The Chinese zodiac is an astrological system used by the Chinese ethnic group. It consists of twelve animals as symbols of the birth year. These twelve zodiac signs are arranged in order and rotate every 12 years. Therefore, in the 13th year, the same zodiac animal symbol will reappear.</string>
+
     <string name="kembali">Back</string>
     <string name="logo_description">Shio Logo</string>
 
     <string name="bagikan">Share</string>
-    <string name="bagikan_template">Your Shio is: %1$s\nDescription: %2$s</string>
+    <string name="bagikan_template">Your Shio is: %1$s\n\nDescription: %2$s</string>
 
 </resources>
