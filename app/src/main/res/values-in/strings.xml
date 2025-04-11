@@ -33,5 +33,5 @@
     <string name="kembali">Kembali</string>
     <string name="logo_description">Logo Shio</string>
     <string name="bagikan">Bagikan</string>
-    <string name="bagikan_template">Shio anda: %1$s\\n\\nDeskripsi: %2$s</string>
+    <string name="bagikan_template">Shio anda: %1$s\n\nDeskripsi: %2$s</string>
 </resources>
